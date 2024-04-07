@@ -29,7 +29,7 @@ a {
 }
 
 .aio-app {
-  width: 360px;
+  width: 350px;
   background: linear-gradient(40deg, #7303c0, #ec38bc);
   color: whitesmoke;
   box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.16),
@@ -43,24 +43,26 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   cursor: default;
 }
 
 .cal-input {
+  text-align: right;
   width: 100%;
   border: none;
   outline: none;
   border-radius: 15px;
-  padding: 14px 28px;
-  /* background: transparent; */
-  font-size: 18px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  opacity: 0.7;
+  font-size: 28px;
 }
 
 .calc-btns {
   display: flex;
-  justify-content: space-around;
-  margin: 15px;
+  justify-content: space-between;
+  margin: 15px 0;
 }
 
 .custom-btn,
@@ -71,7 +73,7 @@ a {
   height: 60px;
   background: coral;
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 28px;
   cursor: default;
   border-radius: 15px;
   transition: all 0.3s;
@@ -91,74 +93,11 @@ a {
 }
 
 .equals-btn {
-  width: 128px;
-}
-
-.unordered-list {
-  border-radius: 15px;
-  color: rgba(0, 0, 0, 0.795);
-  background: #edeef0;
-}
-
-.todo-app ul li {
-  border-radius: 15px;
-  list-style: none;
-  font-size: 18px;
-  padding-left: 15px;
-  user-select: none;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.16);
-}
-
-li .list {
-  padding: 11px !important;
-  padding-left: 30px !important;
+  width: 138px;
+  font-size: 50px;
+  background: rgb(38, 150, 38);
 }
 
 .del-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-image: url(./assets/delete.jpg);
-  background-size: cover;
-  background-position: center;
-  transition: all 0.3s;
-}
-
-.del-btn:hover {
-  filter: grayscale(70%);
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.16),
-    0 0px 5px 3px rgba(0, 0, 0, 0.12);
-}
-
-.del-btn:active {
-  box-shadow: unset;
-  transition: unset;
-}
-
-.check-btn {
-  border: 1px;
-  border-color: black;
-  right: 365px;
-  opacity: 0.3;
-  background-image: url(./assets/checked.png);
-}
-
-.checked {
-  background-image: url(./assets/checked.png);
-  opacity: 1;
-}
-
-.edit-btn {
-  border: none;
-  right: 45px;
-  background-image: url(./assets/edit.png);
-}
-
-.del-btn {
-  border: none;
+  background: rgb(255, 51, 51);
 }

@@ -1,6 +1,8 @@
 import CalculateIcon from "@mui/icons-material/Calculate";
+import { useState } from "react";
 
 export default function Todo() {
+  const [value, setValue] = useState("");
   return (
     <>
       <div id="sidebar" className="App">
@@ -12,36 +14,131 @@ export default function Todo() {
             </h1>
             <form action="">
               <div>
-                <input className="cal-input" type="text" />
+                <input className="cal-input" type="text" value={value} />
               </div>
               <div className="calc-btns">
-                <input className="custom-btn" type="button" value="AC" />
-                <input className="custom-btn" type="button" value="DE" />
-                <input className="custom-btn" type="button" value="." />
-                <input className="custom-btn" type="button" value="/" />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="AC"
+                  onClick={() => setValue("")}
+                />
+                <input
+                  className="custom-btn del-btn"
+                  type="button"
+                  value="DE"
+                  onClick={() => setValue(value.slice(0, -1))}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="."
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="/"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
               </div>
               <div className="calc-btns">
-                <input className="custom-btn" type="button" value="7" />
-                <input className="custom-btn" type="button" value="8" />
-                <input className="custom-btn" type="button" value="9" />
-                <input className="custom-btn" type="button" value="*" />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="7"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="8"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="9"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="*"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
               </div>
               <div className="calc-btns">
-                <input className="custom-btn" type="button" value="4" />
-                <input className="custom-btn" type="button" value="5" />
-                <input className="custom-btn" type="button" value="6" />
-                <input className="custom-btn" type="button" value="+" />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="4"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="5"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="6"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="+"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
               </div>
               <div className="calc-btns">
-                <input className="custom-btn" type="button" value="1" />
-                <input className="custom-btn" type="button" value="2" />
-                <input className="custom-btn" type="button" value="3" />
-                <input className="custom-btn" type="button" value="-" />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="1"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="2"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="3"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="-"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
               </div>
               <div className="calc-btns">
-                <input className="custom-btn" type="button" value="00" />
-                <input className="custom-btn" type="button" value="0" />
-                <input className="equals-btn" type="button" value="=" />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="00"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="custom-btn"
+                  type="button"
+                  value="0"
+                  onClick={(e) => setValue(value + e.target.value)}
+                />
+                <input
+                  className="equals-btn"
+                  type="button"
+                  value="="
+                  onClick={(e) => setValue(eval(value))}
+                />
               </div>
             </form>
           </div>
